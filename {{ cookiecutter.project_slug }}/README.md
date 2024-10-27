@@ -15,4 +15,8 @@ make clean
 make .venv/bin/activate 
 ```
 
+## Deployment 
+
+`flyctl lauch`.  This will take you through the steps to create a Fly.io app, and configue it how you want.  These steps will include options for the database.  Your `settings.py` is ready to go, as is, for Postgres.  Fly.io will create the `DATABASE_URL` and drop it in
+
 Be sure to read the conditions about Postgres on Fly.io: <https://fly.io/docs/postgres/getting-started/what-you-should-know/>.
