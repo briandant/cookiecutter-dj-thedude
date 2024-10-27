@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 import environ
-import django_database_url
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -23,6 +23,7 @@ env_file = os.path.join(BASE_DIR, ".env")
 if os.path.exists(env_file):
     environ.Env.read_env(env_file)
 
+FLY_ENV = False
 if env.str("FLY_APP_NAME", None):
     FLY_ENV = True
     FLY_APP_NAME = os.environ.get("FLY_APP_NAME")
@@ -138,9 +139,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 if FLY_ENV:
     DATABASES = {
-        "default": django_database_url.config(
-            conn_max_age=600, ssl_require=True
-        )
+        "default": dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
     DEBUG = False
     SECRET_KEY = env.str("SECRET_KEY")
