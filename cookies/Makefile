@@ -53,6 +53,10 @@ node_modules/.bin/rustywind: package-lock.json
 rustywind: node_modules/.bin/tailwindcss
 	npx rustywind . --write
 
+initdb: 
+	.venv/bin/python manage.py createsuperuser --noinput --username superlocal --email superlocal@localhost
+	echo "Now run .venv/bin/python manage.py changepassword superlocal"
+
 .PHONY: clean
 clean:
 	rm -rf .venv
