@@ -1,0 +1,6 @@
+mypy 
+ipdb 
+ipython
+djlint
+autoflake
+isort
