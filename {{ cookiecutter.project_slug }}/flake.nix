@@ -15,7 +15,7 @@
               pkgs.gccStdenv
               pkgs.stdenv.cc.cc.lib
               pkgs.nodejs
-              postgresql_16
+              pkgs.postgresql_16
               (pkgs.python312.withPackages (p: [
                 p.tox
                 p.pip-tools
