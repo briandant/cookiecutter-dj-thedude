@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
-import environ
+
 import dj_database_url
+import environ
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "base",
 ]
 
 MIDDLEWARE = [
