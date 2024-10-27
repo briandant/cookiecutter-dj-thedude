@@ -14,3 +14,5 @@ Your `.venv/` should be ready to go.  If you need to clean up and try again:
 make clean 
 make .venv/bin/activate 
 ```
+
+Be sure to read the conditions about Postgres on Fly.io: <https://fly.io/docs/postgres/getting-started/what-you-should-know/>.
