@@ -22,6 +22,7 @@
                 p.psycopg2
                 p.pyzmq
               ]))
+              pkgs.flyctl
               pkgs.ruff
               pkgs.rustywind
               pkgs.tmux
