@@ -16,6 +16,7 @@
               pkgs.stdenv.cc.cc.lib
               pkgs.nodejs
               pkgs.postgresql_16
+              pkgs.flyctl
               (pkgs.python312.withPackages (p: [
                 p.tox
                 p.pip-tools
