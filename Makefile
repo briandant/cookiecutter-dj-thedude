@@ -15,7 +15,7 @@ test-parallel: requirements.txt static/output.css
 # local environment
 .venv/bin/activate: requirements.txt
 	test -d .venv || python3 -m venv .venv
-	.venv/bin/pip install --no-deps -Ur requirements.txt
+	.venv/bin/pip install --no-deps -Ur cookies/requirements.txt -Ur local-requirements.txt
 	touch .venv/bin/activate
 
 static/output.css: static/src/input.css node_modules/.bin/tailwindcss tailwind.config.js
